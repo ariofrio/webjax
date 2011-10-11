@@ -15,13 +15,18 @@ window.unsafeWindow || (
 
 // Make sure this is a WeBWork page.
 if(document.querySelector("#footer #copyright a[href='http://openwebwork.sf.net/']")) {
-  // Check if LaTeXMathML or plainText is selected, if not, select it.
+  // Check if plainText is selected, if not, select it.
   var plainText = document.querySelector("input[type=radio][name=displayMode][value=plainText]");
-  var LaTeXMathML = document.querySelector("input[type=radio][name=displayMode][value=LaTeXMathML]");
-  if(!plainText || !LaTeXMathML) return;
-  if(!plainText.checked && !LaTeXMathML.checked) {
+  if(!plainText) return;
+  if(!plainText.checked) {
     plainText.checked = true;
     plainText.form.submit();
+  }
+
+  // Special-case Answer Previews (TODO: Put this below MathJax for performance? Find out how to parse live, dynamic math/changes.)
+  var previews = document.querySelectorAll(".attemptResults td:nth-of-type(2)");
+  for(var i=0; i<previews.length; i++) {
+    previews[i].innerHTML = "\\(" + previews[i].innerHTML + "\\)";
   }
 
   // Load MathJax. <http://www.mathjax.org/docs/1.1/dynamic.html>
