@@ -38,4 +38,4 @@ if(document.querySelector("#footer #copyright a[href='http://openwebwork.sf.net/
 
   // Profit.
 }
-))();
+})();
