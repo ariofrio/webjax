@@ -1,5 +1,5 @@
 // ==UserScript== 
-// @name           WeBWorkJax 
+// @name           WeBWorKJax 
 // @namespace      http://riofrios.com/
 // @include        *
 // ==/UserScript== 
