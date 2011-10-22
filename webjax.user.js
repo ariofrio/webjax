@@ -2,7 +2,7 @@
 // @name           WebJax 
 // @namespace      http://riofrios.com/
 // @match          http://*.wikipedia.org/wiki/*
-// @match          https://*.wikipedia.org/wiki/*
+// @match          http://*.wikipedia.org/w/index.php*
 // ==/UserScript== 
 
 (function() {
@@ -12,11 +12,15 @@ var config = 'MathJax.Hub.Startup.onload();';
 // 2. Go support some o' my ol' sites
 
 if(document.location.hostname.indexOf("wikipedia.org") != -1 &&
-  document.location.pathname.indexOf("/wiki") == 0) { // 2a. Wikipedia
+  (document.location.pathname.indexOf("/wiki") == 0 |
+   document.location.pathname.indexOf("/w/index.php") == 0)) { // 2a. Wikipedia
   var els = document.querySelectorAll("span.tex");
   for(var i=0; i<els.length; i++) {
     els[i].textContent = '\\(\\displaystyle' +
       els[i].textContent.substr(1, els[i].textContent.length - 2) + '\\)';
+    // 4.2 Fractions, matrices, multilines
+    // "Breaking up a long expression..." trick. Avoids overflow into sideboxes. Does not break MathJax's beautiful positioning of inline math. It's beautiful.
+    els[i].style.display = "inline-block";
   }
   config +=
     'MathJax.Hub.Config({' +
@@ -63,7 +67,6 @@ if(document.location.hostname.indexOf("wikipedia.org") != -1 &&
           // 4.2 Fractions, matrices, multilines
           // MATHJAX: \begin{bmatrix} with \cdots, \vdots, \ddots, looks weird.
           // MATHJAX: \begin{array} doesn't support lack of horizontal lines, double vertical lines.
-          // TODO: "Breaking up a long expression..." trick requires display:inline-block on span.tex. Test if this breaks other pages (specially inline math).
           
           // 5 Alphabets and typefaces
           // Using latin characters because of the following bug.
