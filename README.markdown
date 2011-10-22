@@ -1,5 +1,5 @@
 MathJax for your favorite Websites
----
+===
 
 This is a little userscript that adds [MathJax][] to your favorite websites
 using [the MathJax CDN][cdn]. 
@@ -7,9 +7,9 @@ using [the MathJax CDN][cdn].
   [mathjax]: http://www.mathjax.org/
   [cdn]: http://www.mathjax.org/docs/1.1/start.html#mathjax-cdn
 
-### Supported Sites
+## Supported Sites
 
-#### [Wikipedia](http://wikipedia.org/)
+### [Wikipedia](http://wikipedia.org/)
 
 _Notes:_ For WebJax to work, you must [create an account][signup], go to 
 preferences, select Appearence (or just [click here][]), scroll all the 
