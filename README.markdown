@@ -1,17 +1,24 @@
-MathJax for WeBWorK
+MathJax for your favorite Websites
 ===
 
-This is a little userscript that adds [MathJax][] to [WeBWork][] using [the
-MathJax CDN][cdn].  It (is supposed to) work correctly for questions, answer
-previews, and even sidenotes ("Set Info").
+This is a little userscript that adds [MathJax][] to your favorite websites
+using [the MathJax CDN][cdn]. 
 
   [mathjax]: http://www.mathjax.org/
-  [webwork]: http://openwebwork.sf.net/
   [cdn]: http://www.mathjax.org/docs/1.1/start.html#mathjax-cdn
 
-It has been tested only on some of [UCSB's WeBWorK][ucsb] installations, but
-it should work in other installations too (please send me a patch report or
-an e-mail if it doesn't). It also has only been tested in Google Chrome.
+## Supported Sites
 
-  [ucsb]: http://webwork.math.ucsb.edu/
+[Wikipedia](http://wikipedia.org/)
+:   Notes: For WebJax to work, you must [create an account][signup], go to 
+:   preferences, select Appearence (or just [click here][]), scroll all the 
+:   way down and select "Leave it as TeX (for text browsers)" in the Math 
+:   section. Don't forget to click Save and press Ctrl-R.
+:
+:   I used [Help:Math][] as a compatibility test suite.
 
+  [signup]: http://en.wikipedia.org/w/index.php?title=Special:UserLogin
+  [click here]: http://en.wikipedia.org/wiki/Special:Preferences#mw-prefsection-rendering
+  [Help:Math]: http://en.wikipedia.org/wiki/Help:Math
+
+This script has been tested in Google Chrome.
