@@ -110,7 +110,7 @@ if(document.location.hostname.indexOf("wikipedia.org") != -1 &&
           // MATHJAX: \begin{cases} is supposed to set \textstyle as "the internal math environment" (<http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#The_cases_environment>).
           
           // http://en.wikipedia.org/w/index.php?title=Dot_product&oldid=468596469
-          'bold': "\\\\mathbf",' +
+          'bold: "\\\\mathbf",' +
         '}' +
       '},' +
       '"HTML-CSS": {' +
