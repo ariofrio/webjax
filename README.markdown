@@ -7,6 +7,11 @@ using [the MathJax CDN][cdn]. This script has been tested in Google Chrome.
   [mathjax]: http://www.mathjax.org/
   [cdn]: http://www.mathjax.org/docs/1.1/start.html#mathjax-cdn
 
+To use, first do any necessary setup on your sites (see Supported Sites),
+and then [click here][].
+
+  [click here]: https://github.com/ariofrio/webjax/raw/master/webjax.user.js
+
 ## Supported Sites
 
 ### [Wikipedia](http://wikipedia.org/)
