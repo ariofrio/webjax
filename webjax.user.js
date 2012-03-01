@@ -114,7 +114,7 @@ if(document.location.hostname.indexOf("wikipedia.org") != -1 &&
         '}' +
       '},' +
       '"HTML-CSS": {' +
-        'scale: 132,' + // Yes! Perfect sizing! Although personally, I like 100% better. Just right click.
+        'scale: 132,' + // Yes! Perfect match! Although personally, I like 100% better. Just right click.
         'availableFonts: ["TeX"]' +
       '}' +
     '});';
